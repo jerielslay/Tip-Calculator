@@ -66,6 +66,5 @@ def calculate_tab():
                 print('Y or N only.')
                 quest()
             break
-        return
     quest()
 calculate_tab()
