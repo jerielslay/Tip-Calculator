@@ -15,12 +15,17 @@ def calculate_tab():
         calculate_tab()
     '''
     Next, I'm doing the same thing below but using a try and except function within a while loop. So if the user inputs an
-   incorrect value, it will restart just this one function, as opposed to the whole "calculate_tab" function.
+   incorrect value, it will restart just this one function, as opposed to the whole "calculate_tab" function. I've used the
+   "round operator" so that the floats can round to the nearest second decimal number.
     '''  
     tip = False
     while type(tip) != float:
         try: 
             tip = float(input('What percentage would you like to tip?: '))
+            tip2 = (bill * (tip/100))
+            total = (bill * (tip/100)) + bill
+            print(f"Your tip is: ${round(tip2, 2)}")
+            print(f"Bill total: ${round(total, 2)}")
         except ValueError:
             print('Please enter numbers only.')
     '''
