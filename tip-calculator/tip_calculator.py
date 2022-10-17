@@ -1,6 +1,3 @@
-
-print("Welcome to 'Toney's Steakhouse'")
-
 '''  
 # First I'm defining a function to handle the process
 '''  
@@ -8,12 +5,13 @@ def calculate_tab():
     '''
     # Here I'm creating a try and except function so that if the user enters a value other than a float, then the original
     function will re-run
-    ''' 
-    try: 
-        bill = float(input('Enter your bill amount: $'))
-    except ValueError:
-        print('Please enter numbers only.')
-        calculate_tab()
+    '''
+    bill = False
+    while type(bill) != float:
+        try:
+            bill = float(input('Enter your bill amount: $'))
+        except ValueError:
+                print('Please enter numbers only.')
     
     '''
     Next, I'm doing the same thing below but using a try and except function within a while loop. So if the user inputs an
@@ -56,8 +54,8 @@ def calculate_tab():
     vvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
     '''
     def quest():
-        question = str(input('Would you like to calculate another bill?: [Y]es or [N]o'))
-        while question:
+        while True:
+            question = str(input('Would you like to calculate another bill?: [Y]es or [N]o'))
             if question.lower() == 'y':
                 calculate_tab()
             elif question.lower() == 'n':
@@ -67,4 +65,6 @@ def calculate_tab():
                 quest()
             break
     quest()
+
+print("Welcome to 'Toney's Steakhouse'")
 calculate_tab()
