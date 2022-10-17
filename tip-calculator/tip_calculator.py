@@ -5,7 +5,8 @@
 def calculate_tab(): 
     '''
     Here I'm creating a try and except function so that if the user enters a value other than a float, the except 
-    part of the function will catch the ValueError
+    part of the function will catch the ValueError. The value of "Bill" just needs to be something other than a float. (or I could
+    have writen the statement for it to be TRUE and match as a float)
     '''
     bill = False
     while type(bill) != float:
@@ -15,9 +16,9 @@ def calculate_tab():
                 print('Please enter numbers only.')
     
     '''
-    Next, I'm doing the same thing below but using a try and except function within a while loop. So if the user inputs an
-   incorrect value, it will restart just this one function, as opposed to the whole "calculate_tab" function. I've used the
-   "round operator" so that the floats can round to the nearest second decimal number.
+    Next, I'm doing the same thing below. Using a try and except function within a while loop. So if the user inputs an
+    incorrect value, it will restart just this one function. I've used the "round operator" so that the floats 
+    can round to the nearest second decimal number.
     '''  
     tip = False
     while type(tip) != float:
@@ -32,7 +33,7 @@ def calculate_tab():
         break
             
     '''
-    Here is the same as above...Except is catching the value error in advance.
+    Here is the same as above. "Except" is catching the ValueError in advance.
     '''
     people = False
     while type(people) != int:
@@ -48,8 +49,8 @@ def calculate_tab():
     '''
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
     Above is where the results are being printed. I chose to use the "round" operator so that I could round the decimal to
-    the nearest 2. I did this just in case, hypothetically speaking, the user has like 200 guests on a $50 tab and tipping
-    a random decimal number.
+    the nearest 2. I did this just in case, hypothetically speaking, the user has for instance 200 guests on a $50 tab and 
+    tipping a random decimal number.
     ===========================================================================================
     Below, this is the progam looping itself to see if the user wants to calculate another bill.
     vvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
