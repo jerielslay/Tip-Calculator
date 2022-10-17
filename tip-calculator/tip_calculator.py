@@ -1,10 +1,11 @@
 '''  
 # First I'm defining a function to handle the process
 '''  
+
 def calculate_tab(): 
     '''
-    # Here I'm creating a try and except function so that if the user enters a value other than a float, then the original
-    function will re-run
+    Here I'm creating a try and except function so that if the user enters a value other than a float, the except 
+    part of the function will catch the ValueError
     '''
     bill = False
     while type(bill) != float:
